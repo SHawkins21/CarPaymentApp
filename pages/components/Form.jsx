@@ -16,7 +16,7 @@ const Form = () => {
  <div classname='col-span-3 lg:col-span2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4'>
  <div classname='lg:p-4 h-full rounded-xl'>
     <div>
-        <img className='rounded-xl flex items-center' src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" alt=""/>
+        <img classname='rounded-xl flex items-center' src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" alt=""/>
     </div>
     <div>
         <h4 classname='py-2'>Name Here</h4>
@@ -107,7 +107,9 @@ const Form = () => {
 
         </div>
     
-
+        <div>
+            
+        </div>
 
 </form>
 
