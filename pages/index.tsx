@@ -3,13 +3,34 @@ import type {NextPage} from 'next';
 import Head from 'next/head';
 import {Provider} from 'react-redux';
 import {store} from "./components/store";
-import Image from 'next/image';
-import{useForm} from "react-hook-form";
-import {motion as m} from "framer-motion";
 import Form from './components/Form';
 import Calculator from "./components/Calculator";
+import { useSelector, useDispatch } from 'react-redux'; 
+import { selectCars, addCar} from "./components/slices/carsSlice";
 
 
+{/*const cars = useSelector(selectCars)*/}
+// const dispatch = useDispatch()
+
+const addCars = () => {
+
+  const newCar = {
+    
+    "id": 3,
+    "model" : "Toyoda",
+    "make" : "Avalon",
+    "year" : "2020",
+    "Price" : "48940",
+  }
+
+  // dispatch(addCar(newCar))
+
+}
+
+
+// useEffect(() => {
+
+//   })
 
 
 export default function Home() {
@@ -21,13 +42,48 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      
-     <Provider store={store}>  
+      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
+        <h1 className="text-6xl font-bold">
+        
+          
+          <div>
+            {/* <ul>
+              {
+                cars.map(({id,model,make,year,price}: any) =>(
+                    <li>
+                        <div>
+                          {make}
+                        </div>
+                        <div>
+                          {model}
+                        </div>
+
+                    </li>
+
+                ))
+              }
+            <button className='bg-green-500 px-4 py-3 text-white fornt-semibold' onClick= {()=> addCars()}>Buy Car</button>
+
+            </ul> */}
+          </div> 
+          
+        </h1>
+
+        
+      </main>
+   
       <Form /> 
       <Calculator /> 
-    </Provider>
+ 
       
       
-    </> 
+    </>
+    
+    
+
+    
+
+
+
   )
 }
