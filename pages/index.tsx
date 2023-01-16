@@ -1,16 +1,15 @@
 import {useState, useRef, useEffect} from "react"; 
 import type {NextPage} from 'next';
 import Head from 'next/head';
-import {Provider} from 'react-redux';
-import {store} from "./components/store";
+
 import Form from './components/Form';
 import Calculator from "./components/Calculator";
 import { useSelector, useDispatch } from 'react-redux'; 
-import { selectCars, addCar} from "./components/slices/carsSlice";
+import { selectCars, addCar} from "../slices/carSlice";
+const Home: NextPage = () => {
 
-
-{/*const cars = useSelector(selectCars)*/}
-// const dispatch = useDispatch()
+const cars = useSelector(selectCars)
+const dispatch = useDispatch()
 
 const addCars = () => {
 
@@ -23,17 +22,14 @@ const addCars = () => {
     "Price" : "48940",
   }
 
-  // dispatch(addCar(newCar))
+  dispatch(addCar(newCar))
 
 }
 
 
-// useEffect(() => {
+useEffect(() => {
 
-//   })
-
-
-export default function Home() {
+  })
   return (
     <>
       <Head>
@@ -47,7 +43,7 @@ export default function Home() {
         
           
           <div>
-            {/* <ul>
+            <ul>
               {
                 cars.map(({id,model,make,year,price}: any) =>(
                     <li>
@@ -64,7 +60,7 @@ export default function Home() {
               }
             <button className='bg-green-500 px-4 py-3 text-white fornt-semibold' onClick= {()=> addCars()}>Buy Car</button>
 
-            </ul> */}
+            </ul> 
           </div> 
           
         </h1>
@@ -86,4 +82,7 @@ export default function Home() {
 
 
   )
+
+
+  
 }

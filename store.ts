@@ -1,5 +1,5 @@
 import {configureStore} from '@reduxjs/toolkit'
-import carSlice from "./slices/carsSlice";
+import carSlice from "./slices/carSlice";
 
 export const store = configureStore({
     reducer: { 
@@ -9,4 +9,4 @@ export const store = configureStore({
 })
 
 export type RootState = ReturnType<typeof store.getState> 
-export type appdispatch = typeof store.dispatch
+export type AppDispatch = typeof store.dispatch
