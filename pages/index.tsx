@@ -1,6 +1,8 @@
 import {useState, useRef, useEffect} from "react"; 
 import type {NextPage} from 'next';
 import Head from 'next/head';
+import {Provider} from 'react-redux';
+import {store} from "./components/store";
 import Image from 'next/image';
 import{useForm} from "react-hook-form";
 import {motion as m} from "framer-motion";
@@ -19,8 +21,13 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      
+     <Provider store={store}>  
       <Form /> 
       <Calculator /> 
+    </Provider>
+      
+      
     </> 
   )
 }
