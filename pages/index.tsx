@@ -2,10 +2,11 @@ import {useState, useRef, useEffect} from "react";
 import type {NextPage} from 'next';
 import Head from 'next/head';
 
-import Form from './components/Form';
-import Calculator from "./components/Calculator";
+import Form from '../components/Form';
+import Calculator from "../components/Calculator";
 import { useSelector, useDispatch } from 'react-redux'; 
 import { selectCars, addCar} from "../slices/carSlice";
+
 const Home: NextPage = () => {
 
 const cars = useSelector(selectCars)
@@ -29,6 +30,7 @@ const addCars = () => {
 
 useEffect(() => {
 
+  
   })
   return (
     <>
@@ -46,7 +48,7 @@ useEffect(() => {
             <ul>
               {
                 cars.map(({id,model,make,year,price}: any) =>(
-                    <li>
+                    <li key={id}>
                         <div>
                           {make}
                         </div>
@@ -86,3 +88,5 @@ useEffect(() => {
 
   
 }
+
+export default Home
