@@ -124,16 +124,16 @@ const Form = () => {
     </div>
         </div>
         {/*Buttons*/}
-        <p className='text-align-center uppercase pt-8'>Length of Loan</p>
+        <p className='text-align-center uppercase pt-8'>Length of Loan (In months)</p>
         <div className='flex items-center justify-between py-4'>
             
 
         
-
-            <button className='w-quarter p-4 text to-blue-800 cursor-pointer'>36 months</button>
-            <button className='w-quarter p-4 text to-blue-800 cursor-pointer'>48 months</button>
-            <button className='w-quarter p-4 text to-blue-800 cursor-pointer'>60 months</button>
-            <button className='w-quarter p-4 text to-blue-800 cursor-pointer'>72 months</button>
+      <button className="btns" onClick={() => getBtnValues("36")}>36</button>
+      <button className="btns" onClick={() => getBtnValues("48")}>48</button>
+      <button className="btns" onClick={() => getBtnValues("60")}>60</button>
+      <button className="btns" onClick={() => getBtnValues("72")}>72</button>
+            
 
         </div>
 </form>

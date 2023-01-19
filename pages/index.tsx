@@ -1,31 +1,37 @@
 import {useState, useRef, useEffect} from "react"; 
 import type {NextPage} from 'next';
 import Head from 'next/head';
-
+import Image from 'next/image';
+import {useForm} from "react-hook-form";
+import {motion as m } from "framer-motion"; 
 import Form from '../components/Form';
 import Calculator from "../components/Calculator";
-import { useSelector, useDispatch } from 'react-redux'; 
-import { selectCars, addCar} from "../slices/carSlice";
+import { useSelector, useDispatch } from 'react-redux';
+import { selectCredit } from "../slices/loanSlice"; 
+import Details from '../components/Details'; 
+
+import BtnMonths from '../components/BtnMonths'
+// import { selectCars, addCar} from "../slices/loanSlice";
 
 const Home: NextPage = () => {
 
-const cars = useSelector(selectCars)
+// const cars = useSelector(selectCars)
 const dispatch = useDispatch()
 
-const addCars = () => {
+//const addCars = () => {
 
-  const newCar = {
+  //const newCar = {
     
-    "id": 3,
-    "model" : "Toyoda",
-    "make" : "Avalon",
-    "year" : "2020",
-    "Price" : "48940",
-  }
+   // "id": 3,
+   // "model" : "Toyoda",
+   // "make" : "Avalon",
+   // "year" : "2020",
+   // "Price" : "48940",
+  //}
 
-  dispatch(addCar(newCar))
+  //dispatch(addCar(newCar))
 
-}
+//}
 
 
 useEffect(() => {
@@ -44,7 +50,7 @@ useEffect(() => {
         <h1 className="text-6xl font-bold">
         
           
-          <div>
+          {/*<div>
             <ul>
               {
                 cars.map(({id,model,make,year,price}: any) =>(
@@ -63,7 +69,7 @@ useEffect(() => {
             <button className='bg-green-500 px-4 py-3 text-white fornt-semibold' onClick= {()=> addCars()}>Buy Car</button>
 
             </ul> 
-          </div> 
+            </div> */}
           
         </h1>
 
