@@ -4,20 +4,27 @@ import Head from 'next/head';
 import Image from 'next/image';
 import {useForm} from "react-hook-form";
 import {motion as m } from "framer-motion"; 
-import Form from '../components/Form';
-import Calculator from "../components/Calculator";
 import { useSelector, useDispatch } from 'react-redux';
-import { selectCredit } from "../slices/loanSlice"; 
-import Details from '../components/Details'; 
+import { selectCredit,
 
-import BtnMonths from '../components/BtnMonths'
+
+} from "../slices/loanSlice"; 
+
+import Details from '../components/Details';
+import Form from '../components/Form';
+//import BtnMonths from '../components/BtnMonths'
+ 
+
+
 // import { selectCars, addCar} from "../slices/loanSlice";
 
 const Home: NextPage = () => {
 
 // const cars = useSelector(selectCars)
-const dispatch = useDispatch()
+const dispatch = useDispatch(); 
+//const intrestRate = useSelector(selectCredit)
 
+const {register, handleSubmit, watch, formState: {errors} } =useForm(); 
 //const addCars = () => {
 
   //const newCar = {
@@ -50,37 +57,18 @@ useEffect(() => {
         <h1 className="text-6xl font-bold">
         
           
-          {/*<div>
-            <ul>
-              {
-                cars.map(({id,model,make,year,price}: any) =>(
-                    <li key={id}>
-                        <div>
-                          {make}
-                        </div>
-                        <div>
-                          {model}
-                        </div>
-
-                    </li>
-
-                ))
-              }
-            <button className='bg-green-500 px-4 py-3 text-white fornt-semibold' onClick= {()=> addCars()}>Buy Car</button>
-
-            </ul> 
-            </div> */}
+         
           
         </h1>
 
         
       </main>
    
+
+      <div>
       <Form /> 
-      <Calculator /> 
- 
-      
-      
+      </div>
+      <Details /> 
     </>
     
     

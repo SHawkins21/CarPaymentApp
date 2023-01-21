@@ -71,7 +71,7 @@ console.log(totalIntrest + "total intrest");
 const obj = {
 
     totalLoan,
-    totalIntrest
+    totalIntrest,
 
 
 }

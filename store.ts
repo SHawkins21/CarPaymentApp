@@ -3,7 +3,7 @@ import loanSlice from "./slices/loanSlice";
 
 export const store = configureStore({
     reducer: { 
-        car: loanSlice
+        loan: loanSlice
     
     },
 })
