@@ -42,10 +42,10 @@ const Details = (props: Props) => {
     } = useSelector(selectState)
 
     return ((
-        <div className="" >
+        <div className="max-w-[620px] m-auto px-2 py-2 w-full" >
         <div className='w-full'>
-        <h2 className='font-bold text-2xl pb-6'>Customize your payment</h2>
-        <m.div className=" bg-white p-6 rounded-sm">
+        <m.div className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4">
+        <h1 className='py-4 text-[#0f07ed]'>Customize your payment</h1>
           <div className='flex items-center justify-between gap-4'>
             <div className='bg-sky-400 h-1 w-full'/>
             <div className='font-bold text-2xl pb-2'>${payment.toFixed(2)}/mo.</div>

@@ -80,10 +80,3 @@ const obj = {
 }
 
 
-
-
-
-
-
-
-export default workers

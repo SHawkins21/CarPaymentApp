@@ -12,6 +12,7 @@ import { selectCredit,
 
 import Details from '../components/Details';
 import Form from '../components/Form';
+import BtnMonths from "../components/BtnMonths";
 //import BtnMonths from '../components/BtnMonths'
  
 
@@ -65,10 +66,10 @@ useEffect(() => {
       </main>
    
 
-      <div>
-      <Form /> 
-      </div>
+      <div className="grid sm:grid-cols-2 gap-0 w-full py-5">
+      <Form />
       <Details /> 
+      </div>
     </>
     
     
