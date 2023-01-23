@@ -1,9 +1,7 @@
 import {useState, useRef, useEffect} from "react"; 
 import type {NextPage} from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
 import {useForm} from "react-hook-form";
-import {motion as m } from "framer-motion"; 
 import { useSelector, useDispatch } from 'react-redux';
 import { selectCredit,
 
@@ -12,7 +10,7 @@ import { selectCredit,
 
 import Details from '../components/Details';
 import Form from '../components/Form';
-import BtnMonths from "../components/BtnMonths";
+
 //import BtnMonths from '../components/BtnMonths'
  
 
